@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 161px;
+        }
+        .style2
+        {
+            height: 126px;
+        }
+        p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+        .style9
+        {
+            height: 9px;
+            }
+        .style19
+        {
+            height: 9px;
+            width: 637px;
+        }
+        .style20
+        {
+            width: 130px;
+            height: 262px;
+        }
+        .style21
+        {
+            height: 262px;
+            font-size: smaller;
+        }
+        .style22
+        {
+            color: #FFFFFF;
+            font-size: medium;
+            font-family: Calibri;
+        }
+        .style23
+        {
+            font-family: Calibri;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body style="background-color: #FFFFFF" bgcolor="#9900ff">
+    <form id="form1" runat="server">
+    <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <table class="style1">
+        <tr>
+            <td class="style19">
+                &nbsp;</td>
+            <td class="style9">
+                    <asp:Menu ID="Menu1" runat="server" Height="16px" Orientation="Horizontal" 
+                        Width="536px" BackColor="#FFFBD6" DynamicHorizontalOffset="2" 
+                        Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" 
+                        StaticSubMenuIndent="10px" 
+                        style="font-size: large; font-weight: 700; font-family: Calibri">
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="False"></asp:MenuItem>
+                            <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/Aboutus.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="False"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/Contactus.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="False"></asp:MenuItem>
+                            <asp:MenuItem Text="Help" Value="Help" NavigateUrl="~/help.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="False"></asp:MenuItem>
+                            <asp:MenuItem Text="Net Banking Branches" Value="Net Banking Branches" 
+                                NavigateUrl="~/Net Banking Branchs.aspx">
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="78px" 
+                    ImageUrl="~/image/logo_apgvbbank.gif" Width="272px" />
+            </td>
+        </tr>
+        </table>
+        <div style="background-color: #003366; font-size: smaller;">
+       
+         <marquee style="background-color: #003366; color: #FFFFFF; height: 25px; font-size: large; font-family: Calibri; font-weight: 700;"><font color="white"><font width=6><font syle="oblique">Welcome To Online Internet Banking</font></font></font></marquee>
+        </div>
+        <br />
+        <div>
+        
+            <table class="style1">
+                <tr>
+                    <td align="left" class="style20" valign="top">
+                        <asp:Menu ID="Menu2" runat="server" Height="246px" Width="62px" 
+                    BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                    Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px" 
+                    style="font-size: large; font-weight: 700">
+                    <StaticSelectedStyle BackColor="#FFCC66" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#FFCC66" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/login.aspx" Text="User Login" Value="Login">
+                        </asp:MenuItem>
+                        <asp:MenuItem Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/adminlogin.aspx" Text="Admin Login" 
+                            Value="Admin Login"></asp:MenuItem>
+                        <asp:MenuItem Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem Text="Mobile Banking" Value="Mobile Banking"></asp:MenuItem>
+                        <asp:MenuItem Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem Text="Online Shopping" Value="Online Shopping" 
+                            NavigateUrl="~/online shoping/shopping home.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+
+                        </td>
+                    <td align="left" valign="top" class="style21">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        
+                        </asp:ContentPlaceHolder>
+                        </td>
+                </tr>
+            </table>
+        
+        </div>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+             <p align="center" style="background-color: #003366">
+                 <span class="style22">Andhra Pradesh Grameena Vikas Bank <br />2-5-8/1, Near Ambedkar Statur
+Ramnagar, Hanumakonda, 
+Warangal Dist. Pin: 506 001 </span><span class="style23">&nbsp;</span></p>
+         </asp:ContentPlaceHolder>
+        
+        
+    </form>
+</body>
+</html>
